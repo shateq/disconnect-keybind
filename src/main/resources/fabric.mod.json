@@ -7,8 +7,9 @@
   "description": "Bind the button of your choice to Disconnect!",
   "authors": ["Shateq"],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/disconnect",
+    "sources": "https://github.com/shateq/disconnect-keybind",
+    "issues": "https://github.com/shateq/disconnect-keybind/issues"
   },
 
   "license": "MIT",
