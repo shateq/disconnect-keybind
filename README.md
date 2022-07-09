@@ -1,9 +1,18 @@
-# Fabric Example Mod
+<img href="logo.webp" width="256" >
 
-## Setup
+# Disconnect Keybind
+**Bind yourself a disconnect button!** <br>
+Perfect for: panic attacks, escapists, hardcore players.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+*Fabric API and Fabric Language Kotlin is required!*
 
-## License
+<p><a title="Fabric Language Kotlin" href="https://minecraft.curseforge.com/projects/fabric-language-kotlin" target="_blank" rel="noopener noreferrer"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/c1DH9VL.png" alt="" width="171" height="50" /></a></p> 
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Download
+
+[Modrinth](link) <br>
+[CurseForge](link) <br>
+
+---
+### License
+Project and repository are available under MIT license, check `LICENSE` file for details.
