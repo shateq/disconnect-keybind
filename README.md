@@ -11,8 +11,8 @@ Perfect for: panic attacks, escapists, hardcore players.
 
 ## Download [![CI](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml)
 
-[Modrinth](link) <br>
-[CurseForge](link) <br>
+[Modrinth](https://modrinth.com/mod/disconnect) <br>
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/disconnect) <br>
 
 ---
 ### License
