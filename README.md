@@ -1,6 +1,6 @@
 <img src="logo.webp" width="256" >
 
-# Disconnect Keybind
+# Disconnect Keybind [![CI](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml)
 
 **Bind yourself a disconnect button!** <br>
 Perfect for: panic attacks, escapists, hardcore players.
@@ -11,11 +11,11 @@ Perfect for: panic attacks, escapists, hardcore players.
 
 > Code in here is sitting under `shateq.disconnectkeybind.fabric` package
 
-## Download [![CI](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml)
+## Download
 
 [Modrinth](https://modrinth.com/mod/disconnect) <br>
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/disconnect) <br>
 
----
 ### License
+
 Project and repository are available under MIT license, check `LICENSE` file for details.
