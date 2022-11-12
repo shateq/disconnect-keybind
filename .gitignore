@@ -1,11 +1,8 @@
-# gradle
+run/
 .gradle/
 build/
 out/
 classes/
-
-# eclipse
-*.launch
 
 # idea
 .idea/
@@ -20,8 +17,5 @@ bin/
 .classpath
 .project
 
-# macos
+*.launch
 *.DS_Store
-
-# fabric
-run/
