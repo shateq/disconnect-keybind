@@ -22,14 +22,10 @@ java {
     withSourcesJar()
 }
 
-loom {
-    mixin.defaultRefmapName.set("modid.refmap.json")
-}
-
 tasks {
     jar {
         from("LICENSE") {
-            rename { "${it}_DisconnectKeybind" }
+            rename { "$it-${rootProject.name}" }
         }
     }
 
