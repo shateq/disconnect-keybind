@@ -2,34 +2,32 @@
   "schemaVersion": 1,
   "id": "disconnectkeybind",
   "version": "${version}",
-
   "name": "Disconnect Keybind",
   "description": "Bind the button of your choice to Disconnect!",
-  "authors": ["Shateq"],
+  "authors": [
+    "Shateq"
+  ],
   "contact": {
     "homepage": "https://modrinth.com/mod/disconnect",
     "sources": "https://github.com/shateq/disconnect-keybind",
     "issues": "https://github.com/shateq/disconnect-keybind/issues"
   },
-
   "license": "MIT",
   "icon": "icon.png",
-
   "environment": "client",
   "entrypoints": {
     "client": [
       {
         "adapter": "kotlin",
-        "value": "shateq.fabric.disconnectkeybind.DisconnectKeybind"
+        "value": "shateq.disconnectkeybind.fabric.DisconnectModKt::init"
       }
     ]
   },
-
   "depends": {
+    "minecraft": "1.18.x",
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.18",
     "java": ">=17",
-    "fabric-language-kotlin": ">=1.8.1+kotlin.1.7.0"
+    "fabric-language-kotlin": ">=1.8.6+kotlin.1.7.21"
   }
 }
