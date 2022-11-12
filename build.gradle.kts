@@ -4,7 +4,7 @@ plugins {
 }
 fun p(key: String): Any? = extra.get(key)
 
-version = "1.0.0"
+version = "1.1.0"
 group = "shateq.fabric"
 base.archivesName.set("disconnect-keybind-fabric-${p("mc")}")
 
