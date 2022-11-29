@@ -1,9 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "disconnectkeybind",
+  "id": "disconnect",
   "version": "${version}",
   "name": "Disconnect Keybind",
-  "description": "Bind the button of your choice to Disconnect!",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "description": "${description}",
   "authors": [
     "Shateq"
   ],
@@ -12,8 +14,6 @@
     "sources": "https://github.com/shateq/disconnect-keybind",
     "issues": "https://github.com/shateq/disconnect-keybind/issues"
   },
-  "license": "MIT",
-  "icon": "icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
@@ -26,8 +26,7 @@
   "depends": {
     "minecraft": "1.19.x",
     "fabricloader": ">=0.14.6",
-    "fabric": ">=0.55.1+1.19",
-    "java": ">=17",
+    "fabric": "*",
     "fabric-language-kotlin": ">=1.8.6+kotlin.1.7.21"
   }
 }

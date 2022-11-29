@@ -1,16 +1,18 @@
 plugins {
     id("fabric-loom") version "0.12-SNAPSHOT"
+    id("com.modrinth.minotaur") version "2.+"
     kotlin("jvm") version "1.7.0"
 }
-fun p(key: String): Any? = extra.get(key)
+fun p(key: String): String = project.extra.get(key) as String
 
-version = "1.1.0"
-group = "shateq.fabric"
-base.archivesName.set("disconnect-keybind-fabric-${p("mc")}")
+version = "1.1.1"
+group = "shateq.mods" //no maven publish
+base.archivesName.set("disconnect-keybind-$version-fabric-${p("mc")}")
+description = "Bind yourself a button to Disconnect!"
 
 dependencies {
-    mappings(loom.officialMojangMappings())
     minecraft("com.mojang:minecraft:${p("mc")}")
+    mappings(loom.officialMojangMappings())
     modImplementation("net.fabricmc:fabric-loader:${p("loader")}")
 
     modImplementation("net.fabricmc:fabric-language-kotlin:${p("kotlin_version")}")
@@ -28,16 +30,31 @@ tasks {
             rename { "$it-${rootProject.name}" }
         }
     }
-
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    compileKotlin {
         kotlinOptions.jvmTarget = "17"
     }
-
     processResources {
-        charset("UTF-8") // Must have!
-        // Token replacing
+        filteringCharset = "UTF-8"
         filesMatching("fabric.mod.json") {
-            expand("version" to version)
+            expand(
+                "version" to version,
+                "description" to description
+            )
         }
+    }
+}
+
+modrinth {
+    token.set(System.getenv("MODRINTH_TOKEN")) // This is the default. Remember to have the MODRINTH_TOKEN environment variable set or else this will fail, or set it to whatever you want - just make sure it stays private!
+    projectId.set("disconnect")
+    versionNumber.set(version.toString())
+    versionType.set("release")
+
+    uploadFile.set(tasks.remapJar.name)
+    gameVersions.addAll("1.19", "1.19.1", "1.19.2")
+    dependencies {
+        // scope.type : can be `required`, `optional`, `incompatible`, or `embedded`
+        required.project("fabric-api")
+        required.project("fabric-language-kotlin")
     }
 }
