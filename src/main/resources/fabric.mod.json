@@ -5,7 +5,7 @@
   "name": "Disconnect Keybind",
   "license": "MIT",
   "icon": "assets/icon.png",
-  "description": "${description}",
+  "description": "Bind yourself a button to Disconnect!",
   "authors": [
     "Shateq"
   ],
