@@ -1,12 +1,7 @@
-import com.matthewprenger.cursegradle.CurseProject
-import com.matthewprenger.cursegradle.CurseRelation
-import com.matthewprenger.cursegradle.Options
-
 plugins {
     id("fabric-loom") version "1.0-SNAPSHOT"
     id("com.modrinth.minotaur") version "2.+"
-    id("com.matthewprenger.cursegradle") version "1.4.0"
-
+    //id("com.matthewprenger.cursegradle") version "1.4.0"
     kotlin("jvm") version "1.7.0"
 }
 fun p(key: String): String = project.extra.get(key) as String
@@ -63,7 +58,7 @@ modrinth {
     }
 }
 
-//TODO is failing
+/*TODO is failing
 curseforge {
     apiKey = System.getenv("CURSE")
     options(closureOf<Options> {
@@ -88,4 +83,4 @@ curseforge {
             uploadTask.dependsOn(tasks.remapJar)
         }
     })
-}
+}*/
