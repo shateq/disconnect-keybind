@@ -45,7 +45,7 @@ modrinth {
     token.set(System.getenv("MODRINTH_TOKEN")) // This is the default. Remember to have the MODRINTH_TOKEN environment variable set or else this will fail, or set it to whatever you want - just make sure it stays private!
     projectId.set("disconnect")
     versionName.set("Disconnect Keybind $version for MC 1.19.x")
-    versionNumber.set(version.toString())
+    versionNumber.set("mc${p("mc")}-$version")
     versionType.set("release")
 
     uploadFile.set(tasks["remapJar"])
