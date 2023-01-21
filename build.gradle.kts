@@ -1,10 +1,9 @@
 plugins {
-    id("fabric-loom") version "1.0-SNAPSHOT"
-    id("com.modrinth.minotaur") version "2.+"
-    //id("com.matthewprenger.cursegradle") version "1.4.0"
-    kotlin("jvm") version "1.7.0"
+    id("fabric-loom")
+    id("com.modrinth.minotaur")
+    kotlin("jvm")
 }
-fun p(key: String): String = project.extra.get(key) as String
+fun p(key: String): String = properties[key] as String
 
 version = "1.2.0"
 group = "shateq.mods" //no maven publish
@@ -57,30 +56,3 @@ modrinth {
         required.project("fabric-language-kotlin")
     }
 }
-
-/*TODO is failing
-curseforge {
-    apiKey = System.getenv("CURSE")
-    options(closureOf<Options> {
-        forgeGradleIntegration = false
-        javaIntegration = true
-    })
-    project(closureOf<CurseProject> {
-        id = "disconnect"
-        releaseType = "release"
-        changelog = "Support 1.19.3-pre3"
-
-        relations(closureOf<CurseRelation> {
-            requiredDependency("fabric-api")
-            requiredDependency("fabric-language-kotlin")
-        })
-
-        addGameVersion("Fabric")
-        addGameVersion("1.19.3")
-        addGameVersion("Java 17")
-        mainArtifact(tasks.remapJar.get().archiveFile.get().asFile)
-        afterEvaluate {
-            uploadTask.dependsOn(tasks.remapJar)
-        }
-    })
-}*/

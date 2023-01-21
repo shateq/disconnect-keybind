@@ -20,6 +20,22 @@ fun init() {
         )
     )
 
+    /*val quitGame = KeyBindingHelper.registerKeyBinding(
+        KeyMapping(
+            "key.$id.quit",
+            GLFW.GLFW_KEY_GRAVE_ACCENT,
+            "key.categories.misc"
+        )
+    )
+    ClientTickEvents.END_CLIENT_TICK.register {
+        while (quitGame.consumeClick()) {
+            if (it.screen is TitleScreen) {
+                println("Title screnw")
+                it.stop()
+            }
+        }
+    }*/
+
     ClientTickEvents.END_CLIENT_TICK.register {
         while (disconnect.consumeClick()) {
             val localServer = it.isLocalServer
