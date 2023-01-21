@@ -7,8 +7,8 @@ fun p(key: String): String = properties[key] as String
 
 version = "1.2.0"
 group = "shateq.mods" //no maven publish
-base.archivesName.set("disconnect-keybind-$version-fabric-${p("mc")}")
-description = "Bind yourself a button to Disconnect!"
+base.archivesName.set("disconnect-keybind-fabric-${p("mc")}")
+description = "Bind yourself a button to disconnect!"
 
 dependencies {
     minecraft("com.mojang:minecraft:${p("mc")}")
@@ -44,12 +44,12 @@ tasks {
 modrinth {
     token.set(System.getenv("MODRINTH_TOKEN")) // This is the default. Remember to have the MODRINTH_TOKEN environment variable set or else this will fail, or set it to whatever you want - just make sure it stays private!
     projectId.set("disconnect")
-    versionName.set("Disconnect Keybind $version for MC ${p("mc")}")
+    versionName.set("Disconnect Keybind $version for MC 1.19.x")
     versionNumber.set(version.toString())
     versionType.set("release")
 
     uploadFile.set(tasks["remapJar"])
-    gameVersions.addAll("1.19.3-pre2", "1.19.3-pre3")
+    gameVersions.addAll("1.19", "1.19.1", "1.19.2", "1.19.3")
     dependencies {
         // scope.type : can be `required`, `optional`, `incompatible`, or `embedded`
         required.project("fabric-api")
