@@ -35,8 +35,14 @@ tasks {
     }
     processResources {
         filteringCharset = "UTF-8"
+
+        val props = mapOf(
+            "version" to version
+        )
+        inputs.properties(props)
+
         filesMatching("fabric.mod.json") {
-            expand("version" to version)
+            expand(props)
         }
     }
 }
