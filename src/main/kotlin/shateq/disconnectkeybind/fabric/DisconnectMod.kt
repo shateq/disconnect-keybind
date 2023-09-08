@@ -30,7 +30,6 @@ fun init() {
     ClientTickEvents.END_CLIENT_TICK.register {
         while (quitGame.consumeClick()) {
             if (it.screen is TitleScreen) {
-                println("Title screnw")
                 it.stop()
             }
         }

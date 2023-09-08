@@ -1,6 +1,6 @@
-<img src="logo.webp" width="256" >
+<img src="logo.webp" width="256" />
 
-# Disconnect Keybind
+# Disconnect KeyBind
 
 [![CI](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/shateq/disconnect-keybind/actions/workflows/build.yml)
 
@@ -21,7 +21,7 @@ Perfect for: panic attacks, responsibility escapists, hardcore players.
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/disconnect)
 
 <a href="https://modrinth.com/mod/disconnect/">
-<img src="https://raw.githubusercontent.com/intergrav/devins-badges/v2/assets/cozy/available/modrinth_64h.png" height="64">
+<img src="https://raw.githubusercontent.com/intergrav/devins-badges/v2/assets/cozy/available/modrinth_64h.png" height="64" alt="Download on Modrinth"/>
 </a>
 
 ## License
