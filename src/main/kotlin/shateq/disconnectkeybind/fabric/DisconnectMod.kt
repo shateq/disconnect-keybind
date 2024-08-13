@@ -41,7 +41,7 @@ fun init() {
             it.level?.disconnect() //Disconnects
 
             if (localServer) {
-                it.clearLevel()
+                it.disconnect()
             }
 
             val titleScreen = TitleScreen()

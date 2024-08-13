@@ -5,7 +5,7 @@ plugins {
 }
 fun p(key: String): String = properties[key] as String
 
-version = "1.2.1"
+version = "1.2.2"
 group = "shateq.mods"
 base.archivesName.set("disconnect-keybind-fabric-${p("mc")}")
 description = "Bind yourself a button to disconnect!"
@@ -20,7 +20,7 @@ dependencies {
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
     withSourcesJar()
 }
 
@@ -31,7 +31,7 @@ tasks {
         }
     }
     compileKotlin {
-        kotlinOptions.jvmTarget = "17"
+        kotlinOptions.jvmTarget = "21"
     }
     processResources {
         filteringCharset = "UTF-8"
@@ -50,12 +50,12 @@ tasks {
 modrinth {
     token.set(System.getenv("MODRINTH_TOKEN")) // This is the default. Remember to have the MODRINTH_TOKEN environment variable set or else this will fail, or set it to whatever you want - just make sure it stays private!
     projectId.set("disconnect")
-    versionName.set("Disconnect Keybind $version for 1.20")
+    versionName.set("Disconnect Keybind $version for 1.21")
     versionNumber.set("mc${p("mc")}-$version")
     versionType.set("release")
 
     uploadFile.set(tasks["remapJar"])
-    gameVersions.addAll("1.20", "1.20.1")
+    gameVersions.addAll("1.21")
     dependencies {
         // scope.type : can be `required`, `optional`, `incompatible`, or `embedded`
         required.project("fabric-api")
